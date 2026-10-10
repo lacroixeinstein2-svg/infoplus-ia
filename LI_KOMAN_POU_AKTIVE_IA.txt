@@ -1,0 +1,28 @@
+INFOPLUS IA — GID AN KREYÒL
+
+Bon nouvèl: sit la ak kòd pou konekte IA a deja nan pwojè sa a. Men, mwen pa ka pibliye l dirèkteman sou kont Netlify ou san aksè sou kont lan. Pa janm voye modpas ou oswa kle API ou ban mwen.
+
+SA KI NAN DOSYE A
+- public/index.html: paj InfoPlus la
+- netlify/functions/chat.mjs: sèvè ki rele Gemini IA a san li pa montre kle sekrè a sou sit la
+- netlify.toml: di Netlify ki kote fichye yo ye
+
+ETAP POU AKTIVE L
+1. Telechaje ZIP sa a epi dekonprese li (Extract).
+2. Mete dosye yo nan yon depo GitHub. Lè w ap kreye depo a, mete l Private si opsyon an disponib. Telechaje fichye yo nan rasin depo a, pou w wè netlify.toml, public/ ak netlify/ nan premye nivo a.
+3. Nan Netlify, ouvri sit InfoPlus ou a epi konekte depo GitHub sa a ak sit la (Import from Git). Chwazi branch prensipal la. Netlify ta dwe li netlify.toml poukont li.
+4. Kreye yon kle API nan Google AI Studio. Itilizasyon API a ka gen limit gratis epi kondisyon yo ka chanje.
+5. Nan Netlify, ale nan Project configuration / Environment variables (oswa Site configuration / Environment variables). Ajoute:
+   Key: GEMINI_API_KEY
+   Value: kole kle Gemini API ou la
+   Pa mete kle a nan index.html ni nan GitHub. Pa voye kle a nan chat la.
+6. Fè Deploy/Publish ankò. Chanjman nan anviwònman yo pa pran efè jiskaske nouvo deploy la fèt.
+7. Louvri https://infoplus.netlify.app epi poze yon kesyon. Si li pa mache, gade mesaj erè a; li ka vle di kle a poko mete, limit API a rive, oswa deploy la pa fini.
+
+ENPÒTAN
+- Pa aktive billing oswa peman si ou pa vle depans. Mande yon granmoun ou fè konfyans pou ede w verifye kondisyon yo anvan ou mete yon kle API.
+- Yon kle API ka gen limit itilizasyon. Paske sit la piblik, lòt moun ka itilize kota a tou.
+- Pa voye modpas Netlify/GitHub ni kle API nan chat.
+
+SI OU SOU TELEFÒN ANDROID
+Ou ka fè etap yo nan navigatè a, men gen plizyè ekran. Fè yon etap alafwa epi voye yon ekran foto kote w bloke a (kache adrès imel, kle, ak enfòmasyon prive yo). M ap di w egzakteman ki bouton pou peze.
